@@ -125,7 +125,8 @@ body{
     border-radius: 5px;
     display: flex;
     gap: 20px;
-    transition: border-color 0.3s ease
+    transition: border-color 0.3s ease, background 0.5s ease;
+    
 }
 
 .outerCircle{
@@ -244,11 +245,6 @@ body{
     border-color: var(--Grey-900-darker);
     transition: border-color 0.3s ease;
 }
-
-
-
-
-
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

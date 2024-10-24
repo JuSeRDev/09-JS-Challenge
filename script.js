@@ -16,7 +16,6 @@ bottonsFirst.forEach((botton, i) => {
         })
         botton.style.background = backgroundbutton
         botton.style.borderColor = borderColorActive
-        botton.style.transition = "border-color 0.3s ease"
         innerCircle[i].style.opacity = 1
         outerCircle[i].style.borderColor = borderColorActive
     })
