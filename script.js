@@ -34,7 +34,6 @@ const checkText = document.querySelector(".checkboxText").addEventListener("clic
 
 const errorMessage = document.querySelectorAll(".error")
 
-
 let inName, lastName, Email, message
 
 const inputName = document.querySelector(".inputName")
@@ -116,10 +115,16 @@ const botton = document.querySelector(".button").addEventListener("click",(e)=>{
         console.log("Message: ",message)
         console.log("Query Type:", queryType)
 
-        inputName.value = ""
-        inputLastName.value = ""
-        inputEmail.value = ""
-        textarea.value = ""
+        let inputs = [inputName, inputLastName, inputEmail, textarea]
+
+        inputs.forEach(input => input.value = "");
+
+        setTimeout(() => {
+            if (inputs.every(input => input.value === "")){
+                messageConfirm.style.opacity = "0"
+            }
+        }, 3000);
+        
 
         bottonsFirst.forEach((botton, i) => {
             botton.style.background = "none"
@@ -127,6 +132,9 @@ const botton = document.querySelector(".button").addEventListener("click",(e)=>{
             innerCircle[i].style.opacity = 0
             outerCircle[i].style.borderColor = borderColor
         });
+
+        check.classList.toggle("active")
+        checkbox.classList.toggle("actvieCheckBox")
 
     } else {
         console.log("l evento fue detenido")
