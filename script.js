@@ -5,6 +5,8 @@ const bottonsFirst = document.querySelectorAll(".ge, .sr")
 const backgroundbutton = "var(--Green-200-lighter)"
 const borderColor = "var(--Grey-500-medium)"
 const borderColorActive = "var(--Grey-900-darker)"
+const inputBorderColorOrigins = "var(--Grey-500-medium)"
+const redColor = "var(--Red)"
 
 let queryType
 
@@ -42,6 +44,8 @@ const inputEmail = document.querySelector(".inputEmail")
 const textarea = document.querySelector(".textarea")
 const messageConfirm = document.querySelector(".sectionSix")
 
+
+
 const botton = document.querySelector(".button").addEventListener("click",(e)=>{
     inName = inputName.value
     lastName = inputLastName.value
@@ -58,31 +62,39 @@ const botton = document.querySelector(".button").addEventListener("click",(e)=>{
         if (!namePattern.test(name)) {
             errorMessage[0].style.overflow = "visible"
             e.preventDefault()
+            inputName.style.borderColor = redColor
             isFormValue = false
         } else{
             errorMessage[0].style.overflow = "hidden"
+            inputName.style.borderColor = inputBorderColorOrigins
         }
         if (!namePattern.test(lastName)) {
             errorMessage[1].style.overflow = "visible"
             e.preventDefault()
+            inputLastName.style.borderColor = redColor
             isFormValue = false
         } else {
             errorMessage[1].style.overflow = "hidden"
+            inputName.style.borderColor = inputBorderColorOrigins
         }
         if (!emailPattern.test(email)) {
             errorMessage[2].style.overflow = "visible"
             e.preventDefault()
+            inputEmail.style.borderColor = redColor
             isFormValue = false
         } else {
             errorMessage[2].style.overflow = "hidden"
+            inputEmail.style.borderColor = inputBorderColorOrigins
         }
 
         if (!textPattern.test(message)) {
             errorMessage[4].style.overflow = "visible"
             e.preventDefault()
+            textarea.style.borderColor = redColor
             isFormValue = false
         } else {
             errorMessage[4].style.overflow = "hidden"
+            textarea.style.borderColor = inputBorderColorOrigins
         }
     }
 

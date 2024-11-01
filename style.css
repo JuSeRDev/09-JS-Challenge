@@ -253,5 +253,31 @@ body{
     transition: border-color 0.3s ease;
 }
 
+.errorCheckbox{
+    margin-bottom: 15px;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (width >= 375px){
+    .containerGeneral{
+        width: 85%;
+    }
+
+    .sectionOneDiv1, .sectionOneDiv2{
+        width: 100%;
+    }
+
+    .queryTypeDiv{
+        flex-direction: column;
+    }
+    .textarea{
+        height: 240px;
+    }
+    
+    .checkboxText{
+        font-size: 18px;
+    }
+}
