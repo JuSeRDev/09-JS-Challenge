@@ -261,7 +261,7 @@ body{
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
-@media (width >= 375px){
+@media (width < 700px){
     .containerGeneral{
         width: 85%;
     }
